@@ -12,6 +12,7 @@ from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     import types
+    from typing import Self
 
 import numpy as np
 import torch
@@ -325,7 +326,7 @@ class FastPlaid:
             self.indices.clear()
         gc.collect()
 
-    def __enter__(self) -> "FastPlaid":
+    def __enter__(self) -> Self:
         """Enable context manager usage."""
         return self
 

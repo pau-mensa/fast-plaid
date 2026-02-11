@@ -361,7 +361,7 @@ def process_update(
             raise RuntimeError("Index not loaded for update.")
 
     thresh_path = os.path.join(index_path, "cluster_threshold.npy")
-    cluster_threshold = float(np.load(thresh_path))
+    cluster_threshold = float(np.load(thresh_path).item())
 
     existing_buffer_embeddings: list[torch.Tensor] = []
 

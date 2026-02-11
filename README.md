@@ -44,10 +44,10 @@ FastPlaid is available in multiple versions to support different PyTorch version
 
 | FastPlaid Version | PyTorch Version | Installation Command                |
 | ----------------- | --------------- | ----------------------------------- |
-| 1.4.2.290         | 2.9.0           | `pip install fast-plaid==1.4.2.290` |
-| 1.4.2.280         | 2.8.0           | `pip install fast-plaid==1.4.2.280` |
-| 1.4.2.271         | 2.7.1           | `pip install fast-plaid==1.4.2.271` |
-| 1.4.2.270         | 2.7.0           | `pip install fast-plaid==1.4.2.270` |
+| 1.4.3.290         | 2.9.0           | `pip install fast-plaid==1.4.3.290` |
+| 1.4.3.280         | 2.8.0           | `pip install fast-plaid==1.4.3.280` |
+| 1.4.3.271         | 2.7.1           | `pip install fast-plaid==1.4.3.271` |
+| 1.4.3.270         | 2.7.0           | `pip install fast-plaid==1.4.3.270` |
 
 ### Adding FastPlaid as a Dependency
 
@@ -56,7 +56,7 @@ You can add FastPlaid to your project dependencies with version ranges to ensure
 **For requirements.txt:**
 
 ```
-fast-plaid>=1.4.2.270,<=1.4.2.290
+fast-plaid>=1.4.3.270,<=1.4.3.290
 ```
 
 **For pyproject.toml:**
@@ -64,7 +64,7 @@ fast-plaid>=1.4.2.270,<=1.4.2.290
 ```toml
 [project]
 dependencies = [
-    "fast-plaid>=1.4.2.270,<=1.4.2.290"
+    "fast-plaid>=1.4.3.270,<=1.4.3.290"
 ]
 ```
 
@@ -72,7 +72,7 @@ dependencies = [
 
 ```python
 install_requires=[
-    "fast-plaid>=1.4.2.270,<=1.4.2.290"
+    "fast-plaid>=1.4.3.270,<=1.4.3.290"
 ]
 ```
 
@@ -233,7 +233,6 @@ Parameter         Default     Memory                        Speed               
 low_memory       True        lower = less VRAM usage     True = slower   No effect when device is "cpu", only used when device is GPU. Load index tensors on CPU and move to device only when needed. Accelerate search at the cost of higher VRAM usage when False.
 ```
 
-
 ### Indexing
 
 ```python
@@ -359,7 +358,7 @@ device: str | list[str] | None = None
     - Can be a list of device strings (e.g., ["cuda:0", "cuda:1"]).
     - If multiple GPUs are specified and available, multiprocessing is automatically set up for parallel execution.
       Remember to include your code within an `if __name__ == "__main__":` block for proper multiprocessing behavior.
-    
+
 low_memory: bool = True
     If True, the index is loaded in a memory-efficient manner, keeping tensors on CPU and moving them to the target device only when needed. This reduces VRAM usage at the cost of some performance. No effect when device is "cpu".
 
