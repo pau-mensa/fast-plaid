@@ -654,7 +654,7 @@ subset = filtering.where_any(index="my_index", field="foreign_ids", values=[2, 5
 # → [0, 1, 2]
 
 # Documents with foreign_id 2 AND 3
-subset = filtering.where_all(index="my_index", field="foreign_ids", values=[2, 3])
+subset = filtering.where_all(index="my_index", field="foreign_ids", values=[2, 3, 4])
 # → [0]
 ```
 
